@@ -14,6 +14,8 @@ body {
     min-height: 100vh;
     /* border: 2px solid red; */
     text-align: center;
+    background-color: aqua;
+    color: rgb(2, 85, 85);
 }
 
 .first_section > p {
