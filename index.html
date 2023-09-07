@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HNGx Stage One</title>
+</head>
+<body>
+    <div class="container">
+        <section class="first_section">
+            <p data-testid="slackUserName">Haruna Kareem</p>
+            <p data-testid="currentDayOfTheeek" id="day"></p>
+            <p data-testid="currentUTCTime" id="UTC"></p>
+            <p data-testid="myTrack">Frontend Developer</p>
+            <a data-testid="githubURL" href="https://github.com/kokoblack/HNGx-frontend-stage1" target="_blank">Github Link</a>
+        </section>
+
+        <section class="second_section">
+            <img data-testid="slackDisplayImage" src="./assets/photo.png" alt="image"/>
+        </section>
+    </div>
+</body>
+<script>
+    const day = document.getElementById('day')
+    const utc = document.getElementById('UTC')
+    const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+    day.innerHTML = weekday[new Date().getDay()]
+    utc.innerHTML = new Date().toUTCString()
+</script>
+</html>
