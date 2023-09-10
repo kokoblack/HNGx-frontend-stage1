@@ -26,7 +26,15 @@
     const utc = document.getElementById('UTC')
     const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
-    day.innerHTML = weekday[new Date().getDay()]
-    utc.innerHTML = new Date().getUTCMilliseconds()
+    day.textContent = weekday[new Date().getDay()]
+
+    const getUTCTime = () => {
+        const hours = new Date().getUTCHours().toString().padStart(2, "0")
+        const mins = new Date().getUTCMinutes().toString().padStart(2, "0")
+        const secs = new Date().getUTCSeconds().toString().padStart(2, "0")
+        utc.textContent = `${hours}:${mins}:${secs}`
+    }
+
+    setInterval(getUTCTime, 1000)
 </script>
 </html>
