@@ -27,6 +27,6 @@
     const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
     day.innerHTML = weekday[new Date().getDay()]
-    utc.innerHTML = new Date().toUTCString()
+    utc.innerHTML = new Date().getUTCMilliseconds()
 </script>
 </html>
